@@ -41,7 +41,7 @@ begin
                         tmp_carry := '1';
                     end if;
 
-                when "0010" =>  -- Subtraction (signed)used 2's complement menthod
+                when "0010" =>  -- Subtraction (signed)
                     diff_v   := op1_i - op2_i;
                     result_s <= diff_v;
                     -- signed overflow on subtraction
@@ -88,3 +88,4 @@ begin
     -- drive the output port from the internal register
     result_o <= result_s;
 end behavioral;
+
